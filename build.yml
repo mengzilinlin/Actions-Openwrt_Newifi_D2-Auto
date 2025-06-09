@@ -1,0 +1,19 @@
+
+name: Build OpenWrt
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.config'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup environment
+        run: |
+          echo "构建流程占位（你可以替换为真正编译脚本）"
